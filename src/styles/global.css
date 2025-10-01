@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light dark;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  @apply bg-triton-blue text-white font-body antialiased;
+}
+
+a {
+  @apply text-triton-yellow hover:opacity-90 transition;
+}
+
+.btn-primary {
+  @apply inline-flex items-center gap-2 rounded-full bg-triton-yellow text-black px-5 py-2 font-semibold shadow hover:scale-[1.01] active:scale-[0.99] transition;
+}
+
+.container-fluid {
+  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+}
+
+

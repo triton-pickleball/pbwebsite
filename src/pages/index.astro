@@ -1,0 +1,48 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+<BaseLayout title="Triton Pickleball — UC San Diego" description="Join UCSD's Triton Pickleball club. All skill levels welcome.">
+  <section class="container-fluid py-16 md:py-24">
+    <div class="grid md:grid-cols-2 gap-10 items-center">
+      <div>
+        <h1 class="text-4xl md:text-6xl font-extrabold leading-tight">
+          Triton Pickleball
+        </h1>
+        <p class="mt-4 text-lg text-white/85 max-w-prose">
+          UC San Diego's home for pickleball players of all levels. Learn, compete, and connect.
+        </p>
+        <div class="mt-8 flex gap-4">
+          <a href="/join" class="btn-primary">Join the Club</a>
+          <a href="/events" class="inline-flex items-center gap-2 px-5 py-2 rounded-full border border-white/20">See Schedule</a>
+        </div>
+      </div>
+      <div class="aspect-video rounded-2xl border border-white/10 bg-white/5"></div>
+    </div>
+  </section>
+
+  <section class="container-fluid py-12 grid md:grid-cols-3 gap-6">
+    <div class="rounded-xl border border-white/10 p-6 bg-white/5">
+      <div class="text-3xl font-extrabold">200+</div>
+      <div class="text-white/70">Active members</div>
+    </div>
+    <div class="rounded-xl border border-white/10 p-6 bg-white/5">
+      <div class="text-3xl font-extrabold">5x</div>
+      <div class="text-white/70">Weekly sessions</div>
+    </div>
+    <div class="rounded-xl border border-white/10 p-6 bg-white/5">
+      <div class="text-3xl font-extrabold">3</div>
+      <div class="text-white/70">Competitive teams</div>
+    </div>
+  </section>
+
+  <section class="container-fluid py-16">
+    <h2 class="text-2xl font-bold">Upcoming Events</h2>
+    <div class="mt-6 grid md:grid-cols-3 gap-6">
+      <div class="rounded-xl border border-white/10 p-5 bg-white/5 h-32"></div>
+      <div class="rounded-xl border border-white/10 p-5 bg-white/5 h-32"></div>
+      <div class="rounded-xl border border-white/10 p-5 bg-white/5 h-32"></div>
+    </div>
+  </section>
+</BaseLayout>
+
+

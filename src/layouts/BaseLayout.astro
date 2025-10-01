@@ -1,0 +1,72 @@
+---
+export interface Props {
+  title?: string;
+  description?: string;
+}
+const { title = 'Triton Pickleball', description = 'UC San Diego Pickleball Club' } = Astro.props as Props;
+import '../styles/global.css';
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <title>{title}</title>
+  </head>
+  <body>
+    <header class="border-b border-white/10 backdrop-blur supports-backdrop-blur:bg-white/5 sticky top-0 z-50">
+      <nav class="container-fluid flex items-center justify-between py-4">
+        <a href="/" class="flex items-center gap-3">
+          <div class="h-9 w-9 rounded bg-triton-yellow"></div>
+          <span class="text-xl font-extrabold tracking-tight">Triton Pickleball</span>
+        </a>
+        <ul class="hidden md:flex items-center gap-6 text-sm">
+          <li><a href="/about">About</a></li>
+          <li><a href="/events">Schedule</a></li>
+          <li><a href="/teams">Teams</a></li>
+          <li><a href="/join" class="btn-primary">Join</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main class="min-h-[70vh]">
+      <slot />
+    </main>
+    <footer class="mt-16 border-t border-white/10">
+      <div class="container-fluid py-10 grid md:grid-cols-3 gap-8 text-sm text-white/80">
+        <div>
+          <div class="flex items-center gap-3">
+            <div class="h-8 w-8 rounded bg-triton-yellow"></div>
+            <span class="font-bold">Triton Pickleball</span>
+          </div>
+          <p class="mt-3 max-w-sm">UC San Diego Pickleball Club. All students welcome. Beginners encouraged.</p>
+        </div>
+        <div>
+          <div class="font-semibold mb-2">Links</div>
+          <ul class="space-y-1">
+            <li><a href="/about">About</a></li>
+            <li><a href="/events">Schedule</a></li>
+            <li><a href="/teams">Teams</a></li>
+            <li><a href="/join">Join</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="font-semibold mb-2">Connect</div>
+          <ul class="space-y-1">
+            <li><a href="https://www.instagram.com/triton.pickleball/" rel="noopener noreferrer" target="_blank">Instagram</a></li>
+            <li><a href="https://discord.gg/5Jsz8rKStg" rel="noopener noreferrer" target="_blank">Discord</a></li>
+            <li><a href="mailto:club@example.com">Email</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-t border-white/10 py-6 text-center text-xs text-white/60">
+        © {new Date().getFullYear()} UC San Diego Triton Pickleball. Not affiliated with UC Regents.
+      </div>
+    </footer>
+  </body>
+  </html>
+
+
