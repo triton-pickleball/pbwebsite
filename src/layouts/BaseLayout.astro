@@ -15,9 +15,18 @@ import '../styles/global.css';
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="canonical" href={`https://triton-pickleball.github.io/pbwebsite/`} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={`https://triton-pickleball.github.io/pbwebsite/`} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
     <title>{title}</title>
   </head>
   <body>
+    <script defer data-domain="triton-pickleball.github.io" src="https://plausible.io/js/script.js"></script>
     <header class="border-b border-white/10 backdrop-blur supports-backdrop-blur:bg-white/5 sticky top-0 z-50">
       <nav class="container-fluid flex items-center justify-between py-4">
         <a href={import.meta.env.BASE_URL} class="flex items-center gap-3">

@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://triton-pickleball.github.io/pbwebsite/sitemap.xml
+
+
