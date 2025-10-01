@@ -20,15 +20,15 @@ import '../styles/global.css';
   <body>
     <header class="border-b border-white/10 backdrop-blur supports-backdrop-blur:bg-white/5 sticky top-0 z-50">
       <nav class="container-fluid flex items-center justify-between py-4">
-        <a href="/" class="flex items-center gap-3">
+        <a href={import.meta.env.BASE_URL} class="flex items-center gap-3">
           <div class="h-9 w-9 rounded bg-triton-yellow"></div>
           <span class="text-xl font-extrabold tracking-tight">Triton Pickleball</span>
         </a>
         <ul class="hidden md:flex items-center gap-6 text-sm">
-          <li><a href="/about">About</a></li>
-          <li><a href="/events">Schedule</a></li>
-          <li><a href="/teams">Teams</a></li>
-          <li><a href="/join" class="btn-primary">Join</a></li>
+          <li><a href="about">About</a></li>
+          <li><a href="events">Schedule</a></li>
+          <li><a href="teams">Teams</a></li>
+          <li><a href="join" class="btn-primary">Join</a></li>
         </ul>
       </nav>
     </header>
@@ -47,10 +47,10 @@ import '../styles/global.css';
         <div>
           <div class="font-semibold mb-2">Links</div>
           <ul class="space-y-1">
-            <li><a href="/about">About</a></li>
-            <li><a href="/events">Schedule</a></li>
-            <li><a href="/teams">Teams</a></li>
-            <li><a href="/join">Join</a></li>
+            <li><a href="about">About</a></li>
+            <li><a href="events">Schedule</a></li>
+            <li><a href="teams">Teams</a></li>
+            <li><a href="join">Join</a></li>
           </ul>
         </div>
         <div>
