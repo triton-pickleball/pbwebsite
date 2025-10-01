@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 40">
+  <rect x="0" y="0" width="40" height="40" rx="8" fill="#003B5C"/>
+  <circle cx="28" cy="12" r="6" fill="#FFCD00"/>
+  <path d="M8 28c8-6 20-6 28 0" stroke="#FFCD00" stroke-width="4" stroke-linecap="round" fill="none"/>
+  <text x="52" y="26" font-family="Inter, sans-serif" font-size="18" font-weight="800" fill="#ffffff">Triton Pickleball</text>
+</svg>
+
+

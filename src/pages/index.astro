@@ -16,7 +16,9 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           <a href={`${import.meta.env.BASE_URL}events`} class="inline-flex items-center gap-2 px-5 py-2 rounded-full border border-white/20">See Schedule</a>
         </div>
       </div>
-      <div class="aspect-video rounded-2xl border border-white/10 bg-white/5"></div>
+      <div class="aspect-video rounded-2xl border border-white/10 bg-white/5 overflow-hidden">
+        <img src={`${import.meta.env.BASE_URL}hero.jpg`} alt="Triton Pickleball at UC San Diego" class="h-full w-full object-cover" loading="eager" />
+      </div>
     </div>
   </section>
 
