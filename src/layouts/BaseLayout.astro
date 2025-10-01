@@ -25,10 +25,10 @@ import '../styles/global.css';
           <span class="text-xl font-extrabold tracking-tight">Triton Pickleball</span>
         </a>
         <ul class="hidden md:flex items-center gap-6 text-sm">
-          <li><a href="about">About</a></li>
-          <li><a href="events">Schedule</a></li>
-          <li><a href="teams">Teams</a></li>
-          <li><a href="join" class="btn-primary">Join</a></li>
+          <li><a href={`${import.meta.env.BASE_URL}about`}>About</a></li>
+          <li><a href={`${import.meta.env.BASE_URL}events`}>Schedule</a></li>
+          <li><a href={`${import.meta.env.BASE_URL}teams`}>Teams</a></li>
+          <li><a href={`${import.meta.env.BASE_URL}join`} class="btn-primary">Join</a></li>
         </ul>
       </nav>
     </header>
@@ -47,10 +47,10 @@ import '../styles/global.css';
         <div>
           <div class="font-semibold mb-2">Links</div>
           <ul class="space-y-1">
-            <li><a href="about">About</a></li>
-            <li><a href="events">Schedule</a></li>
-            <li><a href="teams">Teams</a></li>
-            <li><a href="join">Join</a></li>
+            <li><a href={`${import.meta.env.BASE_URL}about`}>About</a></li>
+            <li><a href={`${import.meta.env.BASE_URL}events`}>Schedule</a></li>
+            <li><a href={`${import.meta.env.BASE_URL}teams`}>Teams</a></li>
+            <li><a href={`${import.meta.env.BASE_URL}join`}>Join</a></li>
           </ul>
         </div>
         <div>

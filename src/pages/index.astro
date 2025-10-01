@@ -12,8 +12,8 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           UC San Diego's home for pickleball players of all levels. Learn, compete, and connect.
         </p>
         <div class="mt-8 flex gap-4">
-          <a href="join" class="btn-primary">Join the Club</a>
-          <a href="events" class="inline-flex items-center gap-2 px-5 py-2 rounded-full border border-white/20">See Schedule</a>
+          <a href={`${import.meta.env.BASE_URL}join`} class="btn-primary">Join the Club</a>
+          <a href={`${import.meta.env.BASE_URL}events`} class="inline-flex items-center gap-2 px-5 py-2 rounded-full border border-white/20">See Schedule</a>
         </div>
       </div>
       <div class="aspect-video rounded-2xl border border-white/10 bg-white/5"></div>

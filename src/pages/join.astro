@@ -12,7 +12,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     </ol>
     <div class="mt-8 flex gap-4">
       <a class="btn-primary" href="#">Interest Form</a>
-      <a class="inline-flex items-center gap-2 px-5 py-2 rounded-full border border-white/20" href="events">See Schedule</a>
+      <a class="inline-flex items-center gap-2 px-5 py-2 rounded-full border border-white/20" href={`${import.meta.env.BASE_URL}events`}>See Schedule</a>
     </div>
   </section>
 </BaseLayout>
