@@ -33,7 +33,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         <div class="relative animate-fade-in">
           <div class="relative z-10">
             <div class="aspect-[4/3] rounded-3xl glass-card overflow-hidden shadow-2xl">
-              <img src={`${import.meta.env.BASE_URL}hero.jpg`} alt="Triton Pickleball at UC San Diego" class="h-full w-full object-cover" loading="eager" />
+              <img src={`${import.meta.env.BASE_URL}PBCourt_Closeup.jpg`} alt="Triton Pickleball at UC San Diego" class="h-full w-full object-cover" loading="eager" />
             </div>
           </div>
           <div class="absolute -top-4 -right-4 w-24 h-24 bg-gradient-to-r from-accent-400 to-accent-500 rounded-full blur-xl opacity-60 floating"></div>
@@ -58,12 +58,12 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           <div class="w-16 h-1 bg-gradient-to-r from-primary-500 to-accent-500 mx-auto mt-4 rounded-full"></div>
         </div>
         <div class="glass-card rounded-2xl p-8 text-center group hover:scale-105 transition-transform duration-300">
-          <div class="text-5xl font-bold gradient-text mb-2">5x</div>
-          <div class="text-neutral-600 font-medium">Weekly Sessions</div>
+          <div class="text-5xl font-bold gradient-text mb-2">8+</div>
+          <div class="text-neutral-600 font-medium">Pickleball Courts</div>
           <div class="w-16 h-1 bg-gradient-to-r from-primary-500 to-accent-500 mx-auto mt-4 rounded-full"></div>
         </div>
         <div class="glass-card rounded-2xl p-8 text-center group hover:scale-105 transition-transform duration-300">
-          <div class="text-5xl font-bold gradient-text mb-2">3</div>
+          <div class="text-4xl font-bold gradient-text mb-2">Expanding</div>
           <div class="text-neutral-600 font-medium">Competitive Teams</div>
           <div class="w-16 h-1 bg-gradient-to-r from-primary-500 to-accent-500 mx-auto mt-4 rounded-full"></div>
         </div>
@@ -81,22 +81,22 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       
       <div class="grid md:grid-cols-3 gap-8">
         <div class="glass-card rounded-2xl p-6 group hover:scale-105 transition-all duration-300">
-          <div class="aspect-video bg-gradient-to-br from-primary-100 to-primary-200 rounded-xl mb-4 flex items-center justify-center">
-            <div class="text-primary-600 font-semibold">Event Image</div>
+          <div class="aspect-video rounded-xl mb-4 overflow-hidden">
+            <img src={`${import.meta.env.BASE_URL}PBCourt_Closeup.jpg`} alt="Pickleball court closeup view" class="w-full h-full object-cover" />
           </div>
           <h3 class="font-bold text-lg mb-2">Weekly Practice</h3>
           <p class="text-neutral-600 text-sm">Every Tuesday & Thursday</p>
         </div>
         <div class="glass-card rounded-2xl p-6 group hover:scale-105 transition-all duration-300">
-          <div class="aspect-video bg-gradient-to-br from-accent-100 to-accent-200 rounded-xl mb-4 flex items-center justify-center">
-            <div class="text-accent-600 font-semibold">Event Image</div>
+          <div class="aspect-video rounded-xl mb-4 overflow-hidden">
+            <img src={`${import.meta.env.BASE_URL}pbcourt_topview.jpg`} alt="Pickleball court top view" class="w-full h-full object-cover" />
           </div>
           <h3 class="font-bold text-lg mb-2">Beginner Workshop</h3>
           <p class="text-neutral-600 text-sm">First Saturday of each month</p>
         </div>
         <div class="glass-card rounded-2xl p-6 group hover:scale-105 transition-all duration-300">
-          <div class="aspect-video bg-gradient-to-br from-primary-100 to-accent-100 rounded-xl mb-4 flex items-center justify-center">
-            <div class="text-neutral-600 font-semibold">Event Image</div>
+          <div class="aspect-video rounded-xl mb-4 overflow-hidden">
+            <img src={`${import.meta.env.BASE_URL}twopb_topview.jpg`} alt="Two pickleball courts top view" class="w-full h-full object-cover" />
           </div>
           <h3 class="font-bold text-lg mb-2">Tournament</h3>
           <p class="text-neutral-600 text-sm">Monthly competitive play</p>

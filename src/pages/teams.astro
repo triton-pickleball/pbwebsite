@@ -2,24 +2,59 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 <BaseLayout title="Teams — Triton Pickleball" description="Competitive teams, tryouts, rosters, and results for UCSD pickleball.">
-  <section class="container-fluid py-16">
-    <h1 class="text-4xl font-extrabold">Teams</h1>
-    <p class="mt-4 text-white/85 max-w-prose">
-      Our competitive program fields multiple teams and competes throughout the year. Tryouts occur at the start of each quarter.
-    </p>
+  <!-- Hero Section -->
+  <section class="relative py-20 bg-gradient-to-br from-primary-50 via-white to-accent-50">
+    <div class="container-fluid">
+      <div class="text-center max-w-4xl mx-auto">
+        <h1 class="text-5xl md:text-6xl font-bold mb-6">
+          <span class="gradient-text">Competitive</span> <span class="text-neutral-800">Teams</span>
+        </h1>
+        <p class="text-xl text-neutral-600 leading-relaxed">
+          Our competitive program fields multiple teams and competes throughout the year. Tryouts occur at the start of each quarter.
+        </p>
+      </div>
+    </div>
   </section>
-  <section class="container-fluid py-10 grid md:grid-cols-3 gap-6">
-    <div class="rounded-xl border border-white/10 p-6 bg-white/5">
-      <div class="font-bold text-lg">Tryouts</div>
-      <p class="mt-2 text-white/75">Dates, format, and expectations. Bring water and proper footwear.</p>
-    </div>
-    <div class="rounded-xl border border-white/10 p-6 bg-white/5">
-      <div class="font-bold text-lg">Rosters</div>
-      <p class="mt-2 text-white/75">Team lists and captain contacts will be posted here.</p>
-    </div>
-    <div class="rounded-xl border border-white/10 p-6 bg-white/5">
-      <div class="font-bold text-lg">Results</div>
-      <p class="mt-2 text-white/75">Notable finishes and tournament recaps throughout the season.</p>
+
+  <!-- Teams Info Section -->
+  <section class="py-20">
+    <div class="container-fluid">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl font-bold text-neutral-800 mb-4">Team Information</h2>
+        <p class="text-xl text-neutral-600 max-w-2xl mx-auto">Everything you need to know about our competitive program</p>
+      </div>
+      
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="glass-card rounded-2xl p-8 text-center group hover:scale-105 transition-transform duration-300">
+          <div class="w-16 h-16 bg-gradient-to-r from-primary-500 to-primary-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
+            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-neutral-800 mb-4">Tryouts</h3>
+          <p class="text-neutral-600">Dates, format, and expectations. Bring water and proper footwear.</p>
+        </div>
+        
+        <div class="glass-card rounded-2xl p-8 text-center group hover:scale-105 transition-transform duration-300">
+          <div class="w-16 h-16 bg-gradient-to-r from-accent-500 to-accent-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
+            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-neutral-800 mb-4">Rosters</h3>
+          <p class="text-neutral-600">Team lists and captain contacts will be posted here.</p>
+        </div>
+        
+        <div class="glass-card rounded-2xl p-8 text-center group hover:scale-105 transition-transform duration-300">
+          <div class="w-16 h-16 bg-gradient-to-r from-primary-500 to-accent-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
+            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-neutral-800 mb-4">Results</h3>
+          <p class="text-neutral-600">Notable finishes and tournament recaps throughout the season.</p>
+        </div>
+      </div>
     </div>
   </section>
 </BaseLayout>

@@ -2,62 +2,140 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 <BaseLayout title="About — Triton Pickleball" description="Learn about UCSD's Triton Pickleball club, mission, and officers.">
-  <section class="container-fluid py-16">
-    <h1 class="text-4xl font-extrabold">About</h1>
-    <p class="mt-4 text-white/85 max-w-prose">
-      We’re UC San Diego’s pickleball community. Our mission is to grow the sport on campus, teach fundamentals, and build connections through practices, socials, and competition.
-    </p>
-  </section>
-  <section class="container-fluid py-10 grid md:grid-cols-3 gap-6">
-    <div class="rounded-xl border border-white/10 p-6 bg-white/5">
-      <div class="font-bold text-lg">Growth Mindset</div>
-      <p class="mt-2 text-white/75">Focused drilling to improve our game.</p>
-    </div>
-    <div class="rounded-xl border border-white/10 p-6 bg-white/5">
-      <div class="font-bold text-lg">Community</div>
-      <p class="mt-2 text-white/75">Socials, ladders, and events keep the vibes strong.</p>
-    </div>
-    <div class="rounded-xl border border-white/10 p-6 bg-white/5">
-      <div class="font-bold text-lg">Competitive Path</div>
-      <p class="mt-2 text-white/75">Try out for teams and represent UCSD at tournaments.</p>
-    </div>
-  </section>
-  <section class="container-fluid py-10">
-    <h2 class="text-2xl font-bold">Officers</h2>
-    <div class="mt-6 grid sm:grid-cols-2 md:grid-cols-3 gap-6">
-      <div class="rounded-xl border border-white/10 p-6 bg-white/5">
-        <img src={`${import.meta.env.BASE_URL}officer-placeholder.jpg`} alt="Officer headshot" class="h-32 w-full rounded object-cover" />
-        <div class="mt-3 font-semibold">Officer Name</div>
-        <div class="text-white/70 text-sm">Role</div>
-      </div>
-      <div class="rounded-xl border border-white/10 p-6 bg-white/5">
-        <img src={`${import.meta.env.BASE_URL}officer-placeholder.jpg`} alt="Officer headshot" class="h-32 w-full rounded object-cover" />
-        <div class="mt-3 font-semibold">Officer Name</div>
-        <div class="text-white/70 text-sm">Role</div>
-      </div>
-      <div class="rounded-xl border border-white/10 p-6 bg-white/5">
-        <img src={`${import.meta.env.BASE_URL}officer-placeholder.jpg`} alt="Officer headshot" class="h-32 w-full rounded object-cover" />
-        <div class="mt-3 font-semibold">Officer Name</div>
-        <div class="text-white/70 text-sm">Role</div>
-      </div>
-      <div class="rounded-xl border border-white/10 p-6 bg-white/5">
-        <img src={`${import.meta.env.BASE_URL}officer-placeholder.jpg`} alt="Officer headshot" class="h-32 w-full rounded object-cover" />
-        <div class="mt-3 font-semibold">Officer Name</div>
-        <div class="text-white/70 text-sm">Role</div>
-      </div>
-      <div class="rounded-xl border border-white/10 p-6 bg-white/5">
-        <img src={`${import.meta.env.BASE_URL}officer-placeholder.jpg`} alt="Officer headshot" class="h-32 w-full rounded object-cover" />
-        <div class="mt-3 font-semibold">Officer Name</div>
-        <div class="text-white/70 text-sm">Role</div>
+  <!-- Hero Section -->
+  <section class="relative py-20 bg-gradient-to-br from-primary-50 via-white to-accent-50">
+    <div class="container-fluid">
+      <div class="text-center max-w-4xl mx-auto">
+        <h1 class="text-5xl md:text-6xl font-bold mb-6">
+          <span class="gradient-text">About</span> <span class="text-neutral-800">Us</span>
+        </h1>
+        <p class="text-xl text-neutral-600 leading-relaxed">
+          We're UC San Diego's premier pickleball community. Our mission is to grow the sport on campus, teach fundamentals, and build lifelong connections through practices, socials, and competition.
+        </p>
       </div>
     </div>
   </section>
-  <section class="container-fluid py-10">
-    <h2 class="text-2xl font-bold">Socials</h2>
-    <ul class="mt-4 space-y-2">
-      <li><a href="https://www.instagram.com/triton.pickleball/" class="underline" rel="noopener noreferrer" target="_blank">Instagram</a></li>
-      <li><a href="https://discord.gg/5Jsz8rKStg" class="underline" rel="noopener noreferrer" target="_blank">Discord</a></li>
-    </ul>
+
+  <!-- Values Section -->
+  <section class="py-20">
+    <div class="container-fluid">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl font-bold text-neutral-800 mb-4">Our Values</h2>
+        <p class="text-xl text-neutral-600 max-w-2xl mx-auto">What makes our community special</p>
+      </div>
+      
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="glass-card rounded-2xl p-8 text-center group hover:scale-105 transition-transform duration-300">
+          <div class="w-16 h-16 bg-gradient-to-r from-primary-500 to-primary-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
+            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-neutral-800 mb-4">Growth Mindset</h3>
+          <p class="text-neutral-600">Focused drilling and continuous improvement to elevate everyone's game.</p>
+        </div>
+        
+        <div class="glass-card rounded-2xl p-8 text-center group hover:scale-105 transition-transform duration-300">
+          <div class="w-16 h-16 bg-gradient-to-r from-accent-500 to-accent-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
+            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-neutral-800 mb-4">Community</h3>
+          <p class="text-neutral-600">Socials, ladders, and events that keep the vibes strong and friendships lasting.</p>
+        </div>
+        
+        <div class="glass-card rounded-2xl p-8 text-center group hover:scale-105 transition-transform duration-300">
+          <div class="w-16 h-16 bg-gradient-to-r from-primary-500 to-accent-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
+            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-neutral-800 mb-4">Competitive Path</h3>
+          <p class="text-neutral-600">Try out for teams and represent UCSD at tournaments across the region.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Officers Section -->
+  <section class="py-20 bg-white/50 backdrop-blur-sm">
+    <div class="container-fluid">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl font-bold text-neutral-800 mb-4">Meet Our Officers</h2>
+        <p class="text-xl text-neutral-600 max-w-2xl mx-auto">The dedicated leaders who make our club run</p>
+      </div>
+      
+      <div class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
+        <div class="glass-card rounded-2xl p-6 text-center group hover:scale-105 transition-transform duration-300">
+          <div class="aspect-square rounded-xl overflow-hidden mb-4">
+            <img src={`${import.meta.env.BASE_URL}officer-placeholder.jpg`} alt="Officer headshot" class="h-full w-full object-cover" />
+          </div>
+          <h3 class="font-bold text-lg text-neutral-800 mb-1">Officer Name</h3>
+          <p class="text-neutral-600 text-sm">Role</p>
+        </div>
+        <div class="glass-card rounded-2xl p-6 text-center group hover:scale-105 transition-transform duration-300">
+          <div class="aspect-square rounded-xl overflow-hidden mb-4">
+            <img src={`${import.meta.env.BASE_URL}officer-placeholder.jpg`} alt="Officer headshot" class="h-full w-full object-cover" />
+          </div>
+          <h3 class="font-bold text-lg text-neutral-800 mb-1">Officer Name</h3>
+          <p class="text-neutral-600 text-sm">Role</p>
+        </div>
+        <div class="glass-card rounded-2xl p-6 text-center group hover:scale-105 transition-transform duration-300">
+          <div class="aspect-square rounded-xl overflow-hidden mb-4">
+            <img src={`${import.meta.env.BASE_URL}officer-placeholder.jpg`} alt="Officer headshot" class="h-full w-full object-cover" />
+          </div>
+          <h3 class="font-bold text-lg text-neutral-800 mb-1">Officer Name</h3>
+          <p class="text-neutral-600 text-sm">Role</p>
+        </div>
+        <div class="glass-card rounded-2xl p-6 text-center group hover:scale-105 transition-transform duration-300">
+          <div class="aspect-square rounded-xl overflow-hidden mb-4">
+            <img src={`${import.meta.env.BASE_URL}officer-placeholder.jpg`} alt="Officer headshot" class="h-full w-full object-cover" />
+          </div>
+          <h3 class="font-bold text-lg text-neutral-800 mb-1">Officer Name</h3>
+          <p class="text-neutral-600 text-sm">Role</p>
+        </div>
+        <div class="glass-card rounded-2xl p-6 text-center group hover:scale-105 transition-transform duration-300">
+          <div class="aspect-square rounded-xl overflow-hidden mb-4">
+            <img src={`${import.meta.env.BASE_URL}officer-placeholder.jpg`} alt="Officer headshot" class="h-full w-full object-cover" />
+          </div>
+          <h3 class="font-bold text-lg text-neutral-800 mb-1">Officer Name</h3>
+          <p class="text-neutral-600 text-sm">Role</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Socials Section -->
+  <section class="py-20">
+    <div class="container-fluid">
+      <div class="text-center mb-12">
+        <h2 class="text-4xl font-bold text-neutral-800 mb-4">Connect With Us</h2>
+        <p class="text-xl text-neutral-600 max-w-2xl mx-auto">Follow our journey and stay updated with the latest news</p>
+      </div>
+      
+      <div class="flex justify-center gap-8">
+        <a href="https://www.instagram.com/triton.pickleball/" rel="noopener noreferrer" target="_blank" class="glass-card rounded-2xl p-8 text-center group hover:scale-105 transition-all duration-300">
+          <div class="w-16 h-16 bg-gradient-to-r from-pink-500 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-4">
+            <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 6.62 5.367 11.987 11.988 11.987 6.62 0 11.987-5.367 11.987-11.987C24.014 5.367 18.637.001 12.017.001zM8.449 16.988c-1.297 0-2.448-.49-3.323-1.297C4.198 14.895 3.708 13.744 3.708 12.447s.49-2.448 1.297-3.323c.875-.807 2.026-1.297 3.323-1.297s2.448.49 3.323 1.297c.807.875 1.297 2.026 1.297 3.323s-.49 2.448-1.297 3.323c-.875.807-2.026 1.297-3.323 1.297zm7.83-9.281c-.49 0-.875-.385-.875-.875s.385-.875.875-.875.875.385.875.875-.385.875-.875.875z"/>
+            </svg>
+          </div>
+          <h3 class="font-bold text-lg text-neutral-800">Instagram</h3>
+          <p class="text-neutral-600 text-sm">@triton.pickleball</p>
+        </a>
+        
+        <a href="https://discord.gg/5Jsz8rKStg" rel="noopener noreferrer" target="_blank" class="glass-card rounded-2xl p-8 text-center group hover:scale-105 transition-all duration-300">
+          <div class="w-16 h-16 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-4">
+            <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028c.462-.63.874-1.295 1.226-1.994a.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z"/>
+            </svg>
+          </div>
+          <h3 class="font-bold text-lg text-neutral-800">Discord</h3>
+          <p class="text-neutral-600 text-sm">Join our server</p>
+        </a>
+      </div>
+    </div>
   </section>
 </BaseLayout>
 
