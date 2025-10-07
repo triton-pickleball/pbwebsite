@@ -2,47 +2,106 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 <BaseLayout title="Triton Pickleball — UC San Diego" description="Join UCSD's Triton Pickleball club. All skill levels welcome.">
-  <section class="container-fluid py-16 md:py-24">
-    <div class="grid md:grid-cols-2 gap-10 items-center">
-      <div>
-        <h1 class="text-4xl md:text-6xl font-extrabold leading-tight">
-          Triton Pickleball
-        </h1>
-        <p class="mt-4 text-lg text-white/85 max-w-prose">
-          UC San Diego's home for pickleball players of all levels. Learn, compete, and connect.
-        </p>
-        <div class="mt-8 flex gap-4">
-          <a href={`${import.meta.env.BASE_URL}join`} class="btn-primary">Join the Club</a>
-          <a href={`${import.meta.env.BASE_URL}events`} class="inline-flex items-center gap-2 px-5 py-2 rounded-full border border-white/20">See Schedule</a>
+  <!-- Hero Section -->
+  <section class="relative min-h-screen flex items-center overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-br from-primary-50 via-white to-accent-50"></div>
+    <div class="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%230ea5e9" fill-opacity="0.05"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-40"></div>
+    
+    <div class="container-fluid relative z-10">
+      <div class="grid lg:grid-cols-2 gap-16 items-center">
+        <div class="animate-slide-up">
+          <h1 class="text-5xl md:text-7xl font-bold leading-tight mb-6">
+            <span class="gradient-text">Triton</span><br>
+            <span class="text-neutral-800">Pickleball</span>
+          </h1>
+          <p class="text-xl text-neutral-600 mb-8 leading-relaxed max-w-lg">
+            UC San Diego's premier pickleball community. Learn, compete, and connect with players of all skill levels in our inclusive environment.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4">
+            <a href={`${import.meta.env.BASE_URL}join`} class="btn-primary text-lg px-8 py-4">
+              Join the Club
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+              </svg>
+            </a>
+            <a href={`${import.meta.env.BASE_URL}events`} class="btn-secondary text-lg px-8 py-4">
+              View Schedule
+            </a>
+          </div>
+        </div>
+        
+        <div class="relative animate-fade-in">
+          <div class="relative z-10">
+            <div class="aspect-[4/3] rounded-3xl glass-card overflow-hidden shadow-2xl">
+              <img src={`${import.meta.env.BASE_URL}hero.jpg`} alt="Triton Pickleball at UC San Diego" class="h-full w-full object-cover" loading="eager" />
+            </div>
+          </div>
+          <div class="absolute -top-4 -right-4 w-24 h-24 bg-gradient-to-r from-accent-400 to-accent-500 rounded-full blur-xl opacity-60 floating"></div>
+          <div class="absolute -bottom-4 -left-4 w-32 h-32 bg-gradient-to-r from-primary-400 to-primary-500 rounded-full blur-xl opacity-40 floating" style="animation-delay: 1s;"></div>
         </div>
       </div>
-      <div class="aspect-video rounded-2xl border border-white/10 bg-white/5 overflow-hidden">
-        <img src={`${import.meta.env.BASE_URL}hero.jpg`} alt="Triton Pickleball at UC San Diego" class="h-full w-full object-cover" loading="eager" />
+    </div>
+  </section>
+
+  <!-- Stats Section -->
+  <section class="py-20 bg-white/50 backdrop-blur-sm">
+    <div class="container-fluid">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl font-bold text-neutral-800 mb-4">Join Our Community</h2>
+        <p class="text-xl text-neutral-600 max-w-2xl mx-auto">Be part of UCSD's fastest-growing sports community</p>
+      </div>
+      
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="glass-card rounded-2xl p-8 text-center group hover:scale-105 transition-transform duration-300">
+          <div class="text-5xl font-bold gradient-text mb-2">200+</div>
+          <div class="text-neutral-600 font-medium">Active Members</div>
+          <div class="w-16 h-1 bg-gradient-to-r from-primary-500 to-accent-500 mx-auto mt-4 rounded-full"></div>
+        </div>
+        <div class="glass-card rounded-2xl p-8 text-center group hover:scale-105 transition-transform duration-300">
+          <div class="text-5xl font-bold gradient-text mb-2">5x</div>
+          <div class="text-neutral-600 font-medium">Weekly Sessions</div>
+          <div class="w-16 h-1 bg-gradient-to-r from-primary-500 to-accent-500 mx-auto mt-4 rounded-full"></div>
+        </div>
+        <div class="glass-card rounded-2xl p-8 text-center group hover:scale-105 transition-transform duration-300">
+          <div class="text-5xl font-bold gradient-text mb-2">3</div>
+          <div class="text-neutral-600 font-medium">Competitive Teams</div>
+          <div class="w-16 h-1 bg-gradient-to-r from-primary-500 to-accent-500 mx-auto mt-4 rounded-full"></div>
+        </div>
       </div>
     </div>
   </section>
 
-  <section class="container-fluid py-12 grid md:grid-cols-3 gap-6">
-    <div class="rounded-xl border border-white/10 p-6 bg-white/5">
-      <div class="text-3xl font-extrabold">200+</div>
-      <div class="text-white/70">Active members</div>
-    </div>
-    <div class="rounded-xl border border-white/10 p-6 bg-white/5">
-      <div class="text-3xl font-extrabold">5x</div>
-      <div class="text-white/70">Weekly sessions</div>
-    </div>
-    <div class="rounded-xl border border-white/10 p-6 bg-white/5">
-      <div class="text-3xl font-extrabold">3</div>
-      <div class="text-white/70">Competitive teams</div>
-    </div>
-  </section>
-
-  <section class="container-fluid py-16">
-    <h2 class="text-2xl font-bold">Upcoming Events</h2>
-    <div class="mt-6 grid md:grid-cols-3 gap-6">
-      <div class="rounded-xl border border-white/10 p-5 bg-white/5 h-32"></div>
-      <div class="rounded-xl border border-white/10 p-5 bg-white/5 h-32"></div>
-      <div class="rounded-xl border border-white/10 p-5 bg-white/5 h-32"></div>
+  <!-- Upcoming Events Section -->
+  <section class="py-20">
+    <div class="container-fluid">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl font-bold text-neutral-800 mb-4">Upcoming Events</h2>
+        <p class="text-xl text-neutral-600 max-w-2xl mx-auto">Stay updated with our latest practices, tournaments, and social events</p>
+      </div>
+      
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="glass-card rounded-2xl p-6 group hover:scale-105 transition-all duration-300">
+          <div class="aspect-video bg-gradient-to-br from-primary-100 to-primary-200 rounded-xl mb-4 flex items-center justify-center">
+            <div class="text-primary-600 font-semibold">Event Image</div>
+          </div>
+          <h3 class="font-bold text-lg mb-2">Weekly Practice</h3>
+          <p class="text-neutral-600 text-sm">Every Tuesday & Thursday</p>
+        </div>
+        <div class="glass-card rounded-2xl p-6 group hover:scale-105 transition-all duration-300">
+          <div class="aspect-video bg-gradient-to-br from-accent-100 to-accent-200 rounded-xl mb-4 flex items-center justify-center">
+            <div class="text-accent-600 font-semibold">Event Image</div>
+          </div>
+          <h3 class="font-bold text-lg mb-2">Beginner Workshop</h3>
+          <p class="text-neutral-600 text-sm">First Saturday of each month</p>
+        </div>
+        <div class="glass-card rounded-2xl p-6 group hover:scale-105 transition-all duration-300">
+          <div class="aspect-video bg-gradient-to-br from-primary-100 to-accent-100 rounded-xl mb-4 flex items-center justify-center">
+            <div class="text-neutral-600 font-semibold">Event Image</div>
+          </div>
+          <h3 class="font-bold text-lg mb-2">Tournament</h3>
+          <p class="text-neutral-600 text-sm">Monthly competitive play</p>
+        </div>
+      </div>
     </div>
   </section>
 </BaseLayout>

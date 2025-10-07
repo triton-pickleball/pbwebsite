@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 :root {
-  color-scheme: light dark;
+  color-scheme: light;
 }
 
 html, body {
@@ -11,19 +11,35 @@ html, body {
 }
 
 body {
-  @apply bg-triton-blue text-white font-body antialiased;
+  @apply bg-gradient-to-br from-neutral-50 to-primary-50 text-neutral-900 font-sans antialiased;
 }
 
 a {
-  @apply text-triton-yellow hover:opacity-90 transition;
+  @apply text-primary-600 hover:text-primary-700 transition-colors duration-200;
 }
 
 .btn-primary {
-  @apply inline-flex items-center gap-2 rounded-full bg-triton-yellow text-black px-5 py-2 font-semibold shadow hover:scale-[1.01] active:scale-[0.99] transition;
+  @apply inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-primary-600 to-primary-700 text-white px-6 py-3 font-semibold shadow-lg hover:shadow-xl hover:scale-[1.02] active:scale-[0.98] transition-all duration-200;
+}
+
+.btn-secondary {
+  @apply inline-flex items-center gap-2 rounded-xl border-2 border-primary-200 bg-white/80 backdrop-blur-sm text-primary-700 px-6 py-3 font-semibold hover:bg-primary-50 hover:border-primary-300 transition-all duration-200;
 }
 
 .container-fluid {
   @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+}
+
+.glass-card {
+  @apply bg-white/70 backdrop-blur-md border border-white/20 shadow-xl;
+}
+
+.gradient-text {
+  @apply bg-gradient-to-r from-primary-600 to-primary-800 bg-clip-text text-transparent;
+}
+
+.floating {
+  animation: float 3s ease-in-out infinite;
 }
 
 
