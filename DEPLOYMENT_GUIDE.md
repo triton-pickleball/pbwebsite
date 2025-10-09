@@ -1,38 +1,45 @@
-# Deployment Guide - Secure Environment Variables
+# Deployment Guide - GitHub Pages (SECURE)
 
-## 🚨 CRITICAL: Never commit API keys!
+## 🚨 CRITICAL: GitHub Pages Security Issue Resolved!
 
-Your `.env` file is now safely excluded from git, but you need to set up environment variables on your hosting platform.
+**PROBLEM:** GitHub Pages can't access server-side environment variables, making API keys insecure.
 
-## Platform-Specific Setup
+**SOLUTION:** Use Google Calendar embed instead of API keys - 100% secure and works perfectly!
 
-### Vercel (Recommended for Astro)
+## ✅ GITHUB PAGES DEPLOYMENT (RECOMMENDED)
+
+**Your site is now 100% secure and ready for GitHub Pages!**
+
+### What Changed:
+- ✅ **Removed insecure API integration** from homepage
+- ✅ **Added secure event previews** with your images
+- ✅ **Links to working calendar embed** on events page
+- ✅ **No API keys needed** - completely secure
+
+### Deployment Steps:
+1. **Push your code** - Everything is ready to go
+2. **Enable GitHub Pages** in your repo settings
+3. **Done!** - Your site works perfectly with no security issues
+
+### How It Works:
+- **Homepage**: Shows event preview cards + "View Full Calendar" button
+- **Events Page**: Shows full Google Calendar embed (already working!)
+- **Security**: No API keys exposed - 100% safe
+
+## Alternative: Server-Side Platforms (If you want dynamic events)
+
+### Vercel (Recommended for Dynamic Events)
 1. Push your code to GitHub
 2. Connect your repo to Vercel
-3. Go to Project Settings > Environment Variables
-4. Add these variables:
-   - `GOOGLE_CALENDAR_API_KEY` = your_api_key_here
-   - `GOOGLE_CALENDAR_ID` = primary (or your specific calendar ID)
-5. Redeploy your site
+3. Add environment variables in Vercel dashboard
+4. Deploy automatically
 
 ### Netlify
-1. Push your code to GitHub
-2. Connect your repo to Netlify
-3. Go to Site Settings > Environment Variables
-4. Add the same variables as above
-5. Redeploy
-
-### Railway
 1. Connect your GitHub repo
-2. Go to Variables tab
-3. Add environment variables
-4. Deploy
+2. Add environment variables in site settings
+3. Deploy
 
-### Render
-1. Connect your GitHub repo
-2. Go to Environment tab
-3. Add environment variables
-4. Deploy
+**Note:** These platforms support server-side code and environment variables, but GitHub Pages + Calendar Embed is simpler and more secure.
 
 ## Security Checklist Before Deployment
 
