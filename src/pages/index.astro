@@ -79,31 +79,90 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         <p class="text-xl text-neutral-600 max-w-2xl mx-auto">Stay updated with our latest practices, tournaments, and social events</p>
       </div>
       
-      <div class="grid md:grid-cols-3 gap-8">
-        <div class="glass-card rounded-2xl p-6 group hover:scale-105 transition-all duration-300">
-          <div class="aspect-video rounded-xl mb-4 overflow-hidden">
-            <img src={`${import.meta.env.BASE_URL}PBCourt_Closeup.jpg`} alt="Pickleball court closeup view" class="w-full h-full object-cover" />
-          </div>
-          <h3 class="font-bold text-lg mb-2">Weekly Practice</h3>
-          <p class="text-neutral-600 text-sm">Every Tuesday & Thursday</p>
+      <!-- Events List Container -->
+      <div class="max-w-4xl mx-auto" id="events-container">
+        <!-- Loading state -->
+        <div id="events-loading" class="text-center py-8">
+          <div class="inline-block animate-spin rounded-full h-8 w-8 border-b-2 border-primary-500"></div>
+          <p class="mt-2 text-neutral-600">Loading events...</p>
         </div>
-        <div class="glass-card rounded-2xl p-6 group hover:scale-105 transition-all duration-300">
-          <div class="aspect-video rounded-xl mb-4 overflow-hidden">
-            <img src={`${import.meta.env.BASE_URL}pbcourt_topview.jpg`} alt="Pickleball court top view" class="w-full h-full object-cover" />
-          </div>
-          <h3 class="font-bold text-lg mb-2">Beginner Workshop</h3>
-          <p class="text-neutral-600 text-sm">First Saturday of each month</p>
+        
+        <!-- Events will be populated here by JavaScript -->
+        <div id="events-list" class="space-y-4 hidden">
+          <!-- Dynamic events will be inserted here -->
         </div>
-        <div class="glass-card rounded-2xl p-6 group hover:scale-105 transition-all duration-300">
-          <div class="aspect-video rounded-xl mb-4 overflow-hidden">
-            <img src={`${import.meta.env.BASE_URL}twopb_topview.jpg`} alt="Two pickleball courts top view" class="w-full h-full object-cover" />
-          </div>
-          <h3 class="font-bold text-lg mb-2">Tournament</h3>
-          <p class="text-neutral-600 text-sm">Monthly competitive play</p>
+        
+        <!-- Fallback content if no events -->
+        <div id="events-fallback" class="hidden text-center py-8">
+          <p class="text-neutral-600">No upcoming events scheduled. Check back soon!</p>
         </div>
       </div>
     </div>
   </section>
+
+  <script>
+    // Fetch and display events
+    async function loadEvents() {
+      const loadingEl = document.getElementById('events-loading');
+      const eventsListEl = document.getElementById('events-list');
+      const fallbackEl = document.getElementById('events-fallback');
+      
+      try {
+        const response = await fetch('/api/events');
+        const events = await response.json();
+        
+        loadingEl.classList.add('hidden');
+        
+        if (events && events.length > 0) {
+          eventsListEl.classList.remove('hidden');
+          eventsListEl.innerHTML = events.map(event => createEventCard(event)).join('');
+        } else {
+          fallbackEl.classList.remove('hidden');
+        }
+      } catch (error) {
+        console.error('Error loading events:', error);
+        loadingEl.classList.add('hidden');
+        fallbackEl.classList.remove('hidden');
+      }
+    }
+    
+    function createEventCard(event) {
+      const eventDate = new Date(event.start);
+      const month = eventDate.toLocaleDateString('en-US', { month: 'short' }).toUpperCase();
+      const day = eventDate.getDate();
+      const timeRange = `${event.startTime} - ${event.endTime}`;
+      
+      return `
+        <div class="bg-neutral-50 rounded-2xl p-6 hover:bg-neutral-100 transition-colors duration-200">
+          <div class="flex items-start gap-6">
+            <!-- Date Block -->
+            <div class="bg-neutral-800 text-white rounded-xl p-4 text-center min-w-[80px] flex-shrink-0">
+              <div class="text-sm font-medium uppercase tracking-wide">${month}</div>
+              <div class="text-3xl font-bold mt-1">${day}</div>
+            </div>
+            
+            <!-- Event Details -->
+            <div class="flex-1">
+              <h3 class="font-bold text-xl text-neutral-800 mb-2">${event.title}</h3>
+              ${event.description ? `<p class="text-neutral-600 mb-3">${event.description}</p>` : ''}
+              ${event.location ? `<p class="text-sm text-neutral-500 mb-3">📍 ${event.location}</p>` : ''}
+              
+              <!-- Time Badge -->
+              <div class="inline-flex items-center gap-2 bg-neutral-200 text-neutral-700 px-3 py-2 rounded-full text-sm">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                </svg>
+                ${timeRange}
+              </div>
+            </div>
+          </div>
+        </div>
+      `;
+    }
+    
+    // Load events when the page loads
+    document.addEventListener('DOMContentLoaded', loadEvents);
+  </script>
 </BaseLayout>
 
 
