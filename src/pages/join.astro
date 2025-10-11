@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import { joinPageData, getFullUrl } from '../data/join';
 ---
 <BaseLayout title="Join — Triton Pickleball" description="Become a member of UCSD's Triton Pickleball club.">
   <!-- Hero Section -->
@@ -27,29 +28,29 @@ import BaseLayout from '../layouts/BaseLayout.astro';
               <div class="flex gap-4">
                 <div class="flex-shrink-0 w-8 h-8 bg-gradient-to-r from-primary-500 to-primary-600 rounded-full flex items-center justify-center text-white font-bold">1</div>
                 <div>
-                  <h3 class="font-bold text-lg text-neutral-800 mb-2">Complete Interest Form</h3>
-                  <p class="text-neutral-600">Fill out our interest form to let us know you're interested in joining.</p>
+                  <h3 class="font-bold text-lg text-neutral-800 mb-2">Join Our Community</h3>
+                  <p class="text-neutral-600">Join our Discord for partner-matching and latest updates</p>
                 </div>
               </div>
               <div class="flex gap-4">
                 <div class="flex-shrink-0 w-8 h-8 bg-gradient-to-r from-accent-500 to-accent-600 rounded-full flex items-center justify-center text-white font-bold">2</div>
                 <div>
-                  <h3 class="font-bold text-lg text-neutral-800 mb-2">Attend Tryouts</h3>
-                  <p class="text-neutral-600">Complete forms required to tryout. Tryouts are held to find new members.</p>
+                  <h3 class="font-bold text-lg text-neutral-800 mb-2">Practice the 3 Skills </h3>
+                  <p class="text-neutral-600">Practice your Drives, Dinks, and Drops. These are the main skills we look for in tryouts.</p>
                 </div>
               </div>
               <div class="flex gap-4">
                 <div class="flex-shrink-0 w-8 h-8 bg-gradient-to-r from-primary-500 to-accent-500 rounded-full flex items-center justify-center text-white font-bold">3</div>
                 <div>
-                  <h3 class="font-bold text-lg text-neutral-800 mb-2">Join Our Community</h3>
-                  <p class="text-neutral-600">Get access to our Discord for updates and partner-matching.</p>
+                  <h3 class="font-bold text-lg text-neutral-800 mb-2">Sign up for Tryouts</h3>
+                  <p class="text-neutral-600">Fill out our tryout form and attend tryouts. Keep an eye out for information on our Instagram.</p>
                 </div>
               </div>
               <div class="flex gap-4">
                 <div class="flex-shrink-0 w-8 h-8 bg-gradient-to-r from-accent-500 to-accent-600 rounded-full flex items-center justify-center text-white font-bold">4</div>
                 <div>
                   <h3 class="font-bold text-lg text-neutral-800 mb-2">Start Playing</h3>
-                  <p class="text-neutral-600">Check the schedule and show up—members are always welcome!</p>
+                  <p class="text-neutral-600">Check our Discord partner-matching and Instagram chats to find people to play with!</p>
                 </div>
               </div>
             </div>
@@ -58,24 +59,24 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           <div class="glass-card rounded-3xl p-8">
             <h3 class="text-2xl font-bold text-neutral-800 mb-6">Ready to Get Started?</h3>
             <div class="space-y-4">
-              <a href="#" class="btn-primary w-full text-center block">
-                Interest Form
+              <a href={joinPageData.tryoutForm.url} target="_blank" rel="noopener noreferrer" class="btn-primary w-full text-center block">
+                {joinPageData.tryoutForm.text}
                 <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
                 </svg>
               </a>
-              <a href={`${import.meta.env.BASE_URL}events`} class="btn-secondary w-full text-center block">
-                View Schedule
+              <a href={getFullUrl(joinPageData.scheduleLink.url, import.meta.env.BASE_URL)} class="btn-secondary w-full text-center block">
+                {joinPageData.scheduleLink.text}
               </a>
             </div>
             <div class="mt-8 p-6 bg-gradient-to-r from-primary-50 to-accent-50 rounded-2xl">
               <h4 class="font-bold text-neutral-800 mb-2">Benefits of Membership</h4>
               <ul class="text-sm text-neutral-600 space-y-1">
-                <li>• Access to all practices and events</li>
-                <li>• Equipment provided for beginners</li>
-                <li>• Coaching and skill development</li>
-                <li>• Social events and tournaments</li>
-                <li>• Community of 200+ players</li>
+                <li>• Access to private practices and events</li>
+                <li>• Priority Equipment Access</li>
+                <li>• Member-only discounts</li>
+                <li>• Comp Team Opportunity</li>
+                <li>• Build community and make connections</li>
               </ul>
             </div>
           </div>
