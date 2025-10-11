@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social Media Preview Generator</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: #f8fafc;
+        }
+        .preview-container {
+            width: 1200px;
+            height: 630px;
+            background: linear-gradient(135deg, #0ea5e9 0%, #3b82f6 50%, #8b5cf6 100%);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+        }
+        .content {
+            text-align: center;
+            color: white;
+            z-index: 2;
+            position: relative;
+        }
+        .logo {
+            width: 80px;
+            height: 80px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 24px;
+            font-size: 32px;
+            font-weight: bold;
+            backdrop-filter: blur(10px);
+        }
+        h1 {
+            font-size: 64px;
+            font-weight: 800;
+            margin: 0 0 16px;
+            text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+        .subtitle {
+            font-size: 28px;
+            font-weight: 600;
+            margin: 0 0 24px;
+            opacity: 0.9;
+        }
+        .description {
+            font-size: 20px;
+            font-weight: 400;
+            opacity: 0.8;
+            max-width: 800px;
+            line-height: 1.4;
+        }
+        .pattern {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: radial-gradient(circle at 25% 25%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
+                                radial-gradient(circle at 75% 75%, rgba(255, 255, 255, 0.1) 0%, transparent 50%);
+            z-index: 1;
+        }
+        .instructions {
+            margin-top: 20px;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+        .instructions h3 {
+            margin: 0 0 12px;
+            color: #1f2937;
+        }
+        .instructions p {
+            margin: 8px 0;
+            color: #6b7280;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="preview-container">
+        <div class="pattern"></div>
+        <div class="content">
+            <div class="logo">T</div>
+            <h1>Triton Pickleball</h1>
+            <div class="subtitle">UC San Diego</div>
+            <div class="description">Join UCSD's premier pickleball community. All skill levels welcome.</div>
+        </div>
+    </div>
+    
+    <div class="instructions">
+        <h3>📸 How to Create Your Social Media Image:</h3>
+        <p><strong>Option 1 - Screenshot:</strong> Take a screenshot of the preview above and save as <code>social-preview.jpg</code></p>
+        <p><strong>Option 2 - Browser Tools:</strong> Right-click → "Inspect" → Device toolbar → Set to 1200x630px → Screenshot</p>
+        <p><strong>Option 3 - Online Tools:</strong> Use Canva, Figma, or similar tools to create a 1200x630px image</p>
+        <p><strong>Save as:</strong> <code>social-preview.jpg</code> in your <code>/public/</code> folder</p>
+        <p><strong>Update BaseLayout.astro:</strong> Change the image URL from <code>hero.jpg</code> to <code>social-preview.jpg</code></p>
+    </div>
+</body>
+</html>
